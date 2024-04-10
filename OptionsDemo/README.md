@@ -1,11 +1,10 @@
-# OptionsDemo
+# Configuration and `IOptions<T>` Demo
 
 This short demo outlines:
 
 - Basic project structure for `dotnet new console`
 - Adding configuration providers (in-memory, JSON, and INI files)
-- Binding of settings to a typed `IOptions` instance from multiple configuration provider sources
-- Retrieval of services and options
+- Binding of settings to a typed `IOptions<T>` instance from multiple configuration provider sources, where `T` is a type that represents your configuration settings
 
 ## Configuration
 
