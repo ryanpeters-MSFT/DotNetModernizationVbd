@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    var loggedUser = ViewBag.LoggedUser as LoggedUser;
+}
+
+<div class="text-center">
+    
+    @if (loggedUser != null)
+    {
+        <h1>Hello, @loggedUser.Name</h1>
+        <div>
+            <div><strong>ID:</strong> @loggedUser.Id</div>
+            <div><strong>DOB:</strong> @loggedUser.BirthDate.ToShortDateString()</div>
+        </div>   
+    }
+
+</div>
