@@ -26,7 +26,7 @@ This transition to middleware provides a more flexible and configurable request 
 curl http://localhost:5282/api/auth -H "api-key: ABCDEFG123"
 ```
 
-*Note: to build with ForbidTestApiKeys=true, run:*
+*Note: to run with ForbidTestApiKeys=true, run:*
 
 ```
 dotnet run ForbidTestApiKeys=true

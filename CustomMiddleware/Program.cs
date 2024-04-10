@@ -7,7 +7,6 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-//app.UseMiddleware<AnotherMiddleware>();
 app.UseMiddleware<FormatRequestKeyMiddleware>();
 app.UseMiddleware<ForbidTestApiKeysMiddleware>();
 

@@ -64,7 +64,7 @@ These are just some examples, and the specific challenges during migration can v
 
 ## Examples
 
-- [OptionsDemo](./OptionsDemo/) - Demonstrates the use of multiple configuration sources, specifically in-memory, JSON, and INI files, as well as the ability to load a typed `IOptions<T>` instance from the configuration store.
+- [ConfigurationDemo](./ConfigurationDemo/) - Demonstrates the use of multiple configuration sources, specifically in-memory, JSON, and INI files, as well as the ability to load a typed `IOptions<T>` instance from the configuration store. In addition, you can load in configuration values from environment variables and the command line with one line of code.
 - [Session](./SessionDemo/) - Demonstrates the changes made to session and how to use the new `ISession` interface to get and set session data.
 - [CustomMiddleware](./CustomMiddleware/) - Demonstrates how to define and customize the middleware pipeline, similar to HttpModules.
 - [DependencyInjection](./DependencyInjection/) - Demonstrates how to use the new (native) dependency injection functionality in a Web API project.

@@ -26,6 +26,12 @@ builder.ConfigureAppConfiguration(config =>
 
     // load in-memory settings
     config.AddInMemoryCollection(configValues);
+
+    // add environment variables
+    config.AddEnvironmentVariables();
+
+    // add command line arguments
+    config.AddCommandLine(args);
 });
     
 builder.ConfigureServices((builder, services) =>
@@ -46,6 +52,9 @@ Console.WriteLine($"\nMinInstances: {configuration["PaymentProcessing:MinInstanc
 Console.WriteLine($"MaxInstances: {configuration["PaymentProcessing:MaxInstances"]}\n");
 
 var paymentProcessingSettings = app.Services.GetService<IOptions<PaymentProcessing>>();
+
+// optionally, directly create a PaymentProcessing instance that is bound from the configuration section (i.e., not using IOptions<T>)
+//var paymentProcessingSettingsAlt = configuration.GetSection("PaymentProcessing").Get<PaymentProcessing>();
 
 foreach (var configSetting in paymentProcessingSettings.Value.ConfigSettings)
 {
