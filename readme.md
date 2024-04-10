@@ -1,5 +1,9 @@
 # .NET Framework to .NET Core Migration
 
+This repository is comprised of a set of examples and supporting documentation to demonstrate major changes required when migrating a .NET Framework application to .NET "Core". In these examples, all examples are using .NET 8, but most concepts are available as of most recent major supported (and even unsupported) versions of .NET. 
+
+## What is .NET "Core"?
+
 .NET Core is a free, open-source, cross-platform framework for building modern applications. It supports the development of a wide range of application types including web, mobile, desktop, gaming, IoT, AI, and more. It was developed by Microsoft and the .NET community on GitHub.
 
 It was designed as a brand-new framework, borrowing many concepts of .NET Framework to easy transition and familiarity for developers. OWIN, which aimed to decouple the application from the hosting platform by providing a common, agnostic, means of building components. It also introduced the concept of a middleware, which is a key part of the pipelining in .NET Core. It also provided a separation of concerns between web server communication/support and the application logic.
@@ -13,9 +17,9 @@ It was designed as a brand-new framework, borrowing many concepts of .NET Framew
 
 ## Naming and Versioning
 
-The naming of .NET Core was intended to differentiate it from the original .NET Framework, which is primarily Windows-based. The ‘Core’ signifies that it is a stripped-down version of the framework, focusing on the core features that can be shared across different platforms.
+The naming of .NET Core was intended to differentiate it from the original .NET Framework, which is primarily Windows-based. The "Core" signifies that it is a stripped-down version of the framework, focusing on the core features that can be shared across different platforms.
 
-The versioning of .NET Core started with 1.0, and major updates have incremented the major version number (e.g., 2.0, 3.0). Minor updates increment the minor version number (e.g., 3.1, 3.2). In 2020, Microsoft consolidated .NET Core and other .NET technologies into a single platform called .NET 5.0. The name “.NET 5” was chosen to avoid confusion with .NET Framework, which already had a version 4.8. The versioning for .NET 5 and onwards follows the same major and minor pattern without the “Core” branding.
+The versioning of .NET Core started with 1.0, and major updates have incremented the major version number (e.g., 2.0, 3.0). Minor updates increment the minor version number (e.g., 3.1, 3.2). In 2020, Microsoft consolidated .NET Core and other .NET technologies into a single platform called .NET 5.0. The name ".NET 5" was chosen to avoid confusion with .NET Framework, which already had a version 4.8. The versioning for .NET 5 and onwards follows the same major and minor pattern without the "Core" branding.
 
 ## Limitations in .NET Framework
 
