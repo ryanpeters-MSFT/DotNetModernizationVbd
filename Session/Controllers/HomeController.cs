@@ -2,9 +2,9 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using SessionDemo.Models;
+using Session.Models;
 
-namespace SessionDemo.Controllers;
+namespace Session.Controllers;
 
 public class HomeController : Controller
 {

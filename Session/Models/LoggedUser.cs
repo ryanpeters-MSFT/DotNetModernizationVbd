@@ -1,4 +1,4 @@
-namespace SessionDemo.Models;
+namespace Session.Models;
 
 public class LoggedUser
 {
