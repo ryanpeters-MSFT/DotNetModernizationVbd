@@ -1,4 +1,4 @@
-# .NET Framework vs .NET Core
+# .NET Framework to .NET Core Migration
 
 .NET Core is a free, open-source, cross-platform framework for building modern applications. It supports the development of a wide range of application types including web, mobile, desktop, gaming, IoT, AI, and more. It was developed by Microsoft and the .NET community on GitHub.
 
@@ -63,7 +63,7 @@ These are just some examples, and the specific challenges during migration can v
 - [OptionsDemo](./OptionsDemo/) - Demonstrates the use of multiple configuration sources, specifically in-memory, JSON, and INI files, as well as the ability to load a typed `IOptions<T>` instance from the configuration store.
 - [Session](./SessionDemo/) - Demonstrates the changes made to session and how to use the new `ISession` interface to get and set session data.
 - [CustomMiddleware](./CustomMiddleware/) - Demonstrates how to define and customize the middleware pipeline, similar to HttpModules.
-- [Dependency Injection](./DependencyInjection/) - Demonstrates how to use the new (native) dependency injection functionality in a Web API project.
+- [DependencyInjection](./DependencyInjection/) - Demonstrates how to use the new (native) dependency injection functionality in a Web API project.
 
 ## Links (unsorted)
 
