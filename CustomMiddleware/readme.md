@@ -20,9 +20,13 @@ However, in .NET Core, these concepts are no longer supported and have been repl
 
 This transition to middleware provides a more flexible and configurable request processing pipeline, enhancing the capabilities of .NET Core applications
 
-## Invocation
+## Running the Example
 
-```
+```shell
+# run the application
+dotnet run
+
+# use curl to get format the API key
 curl http://localhost:5282/api/auth -H "api-key: ABCDEFG123"
 ```
 
