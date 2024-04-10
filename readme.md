@@ -60,6 +60,11 @@ These are just some examples, and the specific challenges during migration can v
 
 ## Examples
 
-- [Configuration](./OptionsDemo/) - Demonstrates the use of multiple configuration sources, specifically in-memory, JSON, and INI files. 
-- Session - Demonstrates the changes made to session and how to use the new `ISession` interface to get and set session data.
-- Middleware - Demonstrates how to define and customize the middleware pipeline, similar to HttpModules.
+- [OptionsDemo](./OptionsDemo/) - Demonstrates the use of multiple configuration sources, specifically in-memory, JSON, and INI files, as well as the ability to load a typed `IOptions<T>` instance from the configuration store.
+- [Session](./SessionDemo/) - Demonstrates the changes made to session and how to use the new `ISession` interface to get and set session data.
+- [CustomMiddleware](./CustomMiddleware/) - Demonstrates how to define and customize the middleware pipeline, similar to HttpModules.
+- [Dependency Injection](./DependencyInjection/) - Demonstrates how to use the new (native) dependency injection functionality in a Web API project.
+
+## Links (unsorted)
+
+- [Top-level statements - programs without `Main` methods](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements)
