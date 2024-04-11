@@ -53,14 +53,27 @@ When migrating from .NET Framework to .NET Core, there are several scenarios or 
   
 5. **Third-party libraries** - Some third-party libraries or components designed specifically for .NET Framework may not be compatible with .NET Core. Developers may need to find alternative libraries or update existing ones to support .NET Core.
   
-6. **System.Configuration** - .NET Core does not include System.Configuration, which is commonly used for reading configuration settings from XML files. Configuration in .NET Core is typically done using JSON files, environment variables, or other configuration providers.
+6. **System.Configuration** - .NET Core does not include System.Configuration, which is commonly used for reading configuration settings from XML files. Configuration in .NET Core is typically done using JSON files, environment variables, or other configuration providers. 
   
 7. **Windows-specific APIs** - .NET Core is cross-platform and does not include all Windows-specific APIs available in .NET Framework. If an application relies heavily on Windows-specific functionality, it may require modifications or alternative approaches when migrating to .NET Core.
-  
-8. **COM interop** - COM interop, used for communication with COM objects, is not directly supported in .NET Core. Developers may need to find alternative approaches or use .NET Framework for components that rely on COM interop.
-  
 
-These are just some examples, and the specific challenges during migration can vary depending on the complexity and technologies used in the original .NET Framework application. It's important to thoroughly assess the application's dependencies and functionality before planning a migration to .NET Core.
+    - **MSMQ** - .NET Core no longer supports MSMQ, not only because it is a Windows-specific technology, but also because in a cloud-focused landscape, better alternatives exist that are cross-platform (and multi-cloud). Popular alternatives include RabbitMQ, NServiceBus, Azure Service Bus, or SQL Server Broker Services. 
+
+    - **MSDTC** - Microsoft Distributed Transaction Coordinator, while is technically supported, is tightly coupled with Windows and is availabiel **only for Windows hosting environments**. Attempts to deploy code that leverages `TransactionScope` on multiple (distributed) database connections will throw an exception.
+
+8. **COM interop** - COM interop, used for communication with COM objects, is not directly supported in .NET Core. Developers may need to find alternative approaches or use .NET Framework for components that rely on COM interop.
+
+## Support Lifecycle
+
+Different versions of .NET releases offer different support windows. Currently, even-numbered releases are offered with LTS (Long Term Support) of 3 years from the date of release, while odd-numbered releases are offered with STS (Standard Term Support) of 18 months. 
+
+Currently, a new major version of .NET is released every year, typically in November. 
+
+![.NET support lifecycle](./.images/release-schedule-dark.svg)
+
+### Links
+
+- [.NET and .NET Core Support Policy](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)
 
 ## Examples
 
@@ -72,3 +85,4 @@ These are just some examples, and the specific challenges during migration can v
 ## Links (unsorted)
 
 - [Top-level statements - programs without `Main` methods](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements)
+- [Windows Compatibility Pack for .NET](https://devblogs.microsoft.com/dotnet/announcing-the-windows-compatibility-pack-for-net-core/)
