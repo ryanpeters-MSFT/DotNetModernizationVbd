@@ -21,6 +21,8 @@ The naming of .NET Core was intended to differentiate it from the original .NET 
 
 The versioning of .NET Core started with 1.0, and major updates have incremented the major version number (e.g., 2.0, 3.0). Minor updates increment the minor version number (e.g., 3.1, 3.2). In 2020, Microsoft consolidated .NET Core and other .NET technologies into a single platform called .NET 5.0. The name ".NET 5" was chosen to avoid confusion with .NET Framework, which already had a version 4.8. The versioning for .NET 5 and onwards follows the same major and minor pattern without the "Core" branding.
 
+[![.NET versions](./.images/dotnethistory.webp)](https://world.optimizely.com/resources/net/about/)
+
 ## Limitations in .NET Framework
 
 The .NET Framework, while robust and widely used, had several limitations:
