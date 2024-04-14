@@ -70,6 +70,12 @@ dotnet run
 # optionally, with command line arguments
 dotnet run "MyVariable=hello"
 ```
-
-
 ### Publishing
+
+```shell
+# create a web API project
+dotnet new webapi -n TestApi
+
+# publish to a folder (a build also occurs)
+dotnet publish .\TestApi\TestApi.csproj -o .\output -c Release
+```
