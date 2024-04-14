@@ -12,3 +12,34 @@ One of the biggest benefits of moving to .NET Core is the ability to run your ap
 
 ## Deploying a Web API to a Container
 
+You can quickly generate a web API project and deploy to a docker container host in a couple lines. *Be sure that Docker is installed on your host*
+
+```shell
+# create a new webapi project
+dotnet new webapi -n ContainerApi
+
+# build the container from the application
+docker build -f .\Dockerfile .\ContainerApi\ -t containerapi:latest
+
+# OPTIONALLY, push to a registry
+# docker tag containerapi:latest my.registrydomain.tld/containerapi:latest
+# docker push my.registrydomain.tld/containerapi:latest
+
+# run the container (use -d for detached, and on local port 9991)
+docker run --name containerapi -d -p 9991:8080 containerapi:latest
+```
+
+Once the container image has been built and is running, you can invoke a request to it:
+
+```shell
+# curl the forecast API url
+curl http://localhost:9991/weatherforecast
+```
+
+Finally, remove your test container:
+
+```shell
+# "clean up, clean up, everybody, everywhere..."
+docker stop containerapi
+docker rm containerapi
+```
