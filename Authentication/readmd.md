@@ -1,6 +1,6 @@
 # Authentication
 
-When migrating from .NET Framework to .NET Core, authentication and authorization mechanisms have undergone significant changes. These changes are aimed at providing a more modern and flexible approach to security while aligning with the principles of .NET Core's cross-platform and modular architecture. Here's an overview of the changes and the various modes of authentication and authorization in .NET Core:
+When migrating from .NET Framework to .NET Core, authentication and authorization mechanisms have undergone significant changes. These changes are aimed at providing a more modern and flexible approach to security while aligning with the principles of .NET Core's cross-platform and modular architecture.
 
 ## Changes in Authentication and Authorization:
 
@@ -22,10 +22,11 @@ When migrating from .NET Framework to .NET Core, authentication and authorizatio
 ### Cookie Authentication
 - This mode relies on encrypted cookies to authenticate users. It's commonly used for web applications where users log in with a username and password.
 - ASP.NET Core provides built-in support for cookie authentication through middleware components.
+- Is the replacement for Forms Authentication in .NET Framework
 
 ### JWT (JSON Web Tokens) Authentication
-   - JWT authentication is popular for securing Web APIs. It involves generating a token containing user claims, which is then sent with each request for authentication.
-   - .NET Core supports JWT authentication through middleware components or third-party libraries like Microsoft.AspNetCore.Authentication.JwtBearer.
+- JWT authentication is popular for securing Web APIs. It involves generating a token containing user claims, which is then sent with each request for authentication.
+- .NET Core supports JWT authentication through middleware components or third-party libraries like Microsoft.AspNetCore.Authentication.JwtBearer.
 
 ### OAuth and OpenID Connect
 - .NET Core supports OAuth 2.0 and OpenID Connect protocols for authentication with external identity providers like Google, Facebook, or Azure Active Directory.

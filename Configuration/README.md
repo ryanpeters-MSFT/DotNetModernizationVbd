@@ -11,22 +11,19 @@ This short demo outlines:
 In .NET Framework and .NET Core, configuration is handled differently due to the architectural and design differences between the two frameworks:
 
 ### .NET Framework Configuration:
-  
-  - In .NET Framework, configuration settings are typically stored in XML-based configuration files, such as `web.config` for web applications or `app.config` for non-web applications.
-    
-  - Configuration settings include application settings, connection strings, custom settings, and configuration sections for various components like ASP.NET, WCF, and more.
-    
-  - Configuration settings can be accessed using the `ConfigurationManager` class and related APIs (`Configuration`, `ConfigurationSection`, `ConnectionStringSettings`, etc.).
-    
-  - Configuration files can be modified manually or through tools like Visual Studio's project settings editor.
+
+- In .NET Framework, configuration settings are typically stored in XML-based configuration files, such as `web.config` for web applications or `app.config` for non-web applications.
+- Configuration settings include application settings, connection strings, custom settings, and configuration sections for various components like ASP.NET, WCF, and more.
+- Configuration settings can be accessed using the `ConfigurationManager` class and related APIs (`Configuration`, `ConfigurationSection`, `ConnectionStringSettings`, etc.).
+- Configuration files can be modified manually or through tools like Visual Studio's project settings editor.
     
 ### .NET Core Configuration:
   
-  - In .NET Core, configuration is more flexible and can be stored in various formats, including JSON, XML, INI, environment variables, command-line arguments, and Azure Key Vault.
-  - The most common format for configuration in .NET Core is JSON, using files like `appsettings.json` or environment-specific files like `appsettings.Production.json`.
-  - Configuration settings are accessed using the `IConfiguration` interface, which is part of the Microsoft.Extensions.Configuration namespace.
-  - Configuration settings are typically loaded and managed through the `ConfigurationBuilder` class, which reads configuration sources and builds the configuration object.
-  - .NET Core provides a hierarchy for configuration sources, allowing settings to be overridden or merged from multiple sources based on precedence rules.
+- In .NET Core, configuration is more flexible and can be stored in various formats, including JSON, XML, INI, environment variables, command-line arguments, and Azure Key Vault.
+- The most common format for configuration in .NET Core is JSON, using files like `appsettings.json` or environment-specific files like `appsettings.Production.json`.
+- Configuration settings are accessed using the `IConfiguration` interface, which is part of the Microsoft.Extensions.Configuration namespace.
+- Configuration settings are typically loaded and managed through the `ConfigurationBuilder` class, which reads configuration sources and builds the configuration object.
+- .NET Core provides a hierarchy for configuration sources, allowing settings to be overridden or merged from multiple sources based on precedence rules.
 
 ## Key Differences:
 
