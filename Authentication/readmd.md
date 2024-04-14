@@ -38,3 +38,8 @@ When migrating from .NET Framework to .NET Core, authentication and authorizatio
 ### Role-based and Claims-based Authorization
 - .NET Core supports both role-based and claims-based authorization. Role-based authorization assigns users to predefined roles, while claims-based authorization evaluates user claims to determine access rights.
 - ASP.NET Core Identity integrates seamlessly with role-based authorization, providing a straightforward way to manage user roles and permissions.
+
+## Sample Projects
+
+- **[Crm](https://git.binarydad.com/ryan/Crm)** - Basic example of using cookie authentication against a static credential
+- **[GeekFit](https://git.binarydad.com/ryan/GeekFit)** - Uses Entity Framework Identity 
