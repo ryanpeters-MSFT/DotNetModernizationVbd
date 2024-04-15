@@ -1,0 +1,25 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Home Page";
+
+    var loggedUser = ViewBag.LoggedUser as ClaimsPrincipal;
+}
+
+<div class="text-center">
+
+    @if (loggedUser != null)
+    {
+        <h1 class="display-4">Welcome back, @loggedUser.Identity.Name</h1>
+
+        @foreach(var claim in loggedUser.Claims)
+        {
+            <div><strong>@claim.Type</strong> - @claim.Value</div>
+        }
+    }
+    else
+    {
+        <h1 class="display-4">Welcome</h1>
+    }
+
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
