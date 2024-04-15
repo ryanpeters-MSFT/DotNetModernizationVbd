@@ -18,6 +18,8 @@ var builder = Host.CreateDefaultBuilder(args);
 
 builder.ConfigureAppConfiguration(config =>
 {
+    // NOTE: the order matters!
+
     // load settings from settings.json
     config.AddJsonFile("settings.json");
 
@@ -29,6 +31,9 @@ builder.ConfigureAppConfiguration(config =>
 
     // add environment variables
     config.AddEnvironmentVariables();
+
+    // add local user secrets
+    config.AddUserSecrets<Program>();
 
     // add command line arguments
     config.AddCommandLine(args);
@@ -46,6 +51,10 @@ var configuration = app.Services.GetService<IConfiguration>();
 
 Console.WriteLine($"\nSetting from memory: {configuration["credentials:name"]}");
 Console.WriteLine($"Setting from settings.json: {configuration["PaymentProcessing:ConfigSettings:0:Name"]}");
+
+// settings from secrets json file
+Console.WriteLine($"\nSettings from secrets.json: {configuration["Username"]}");
+Console.WriteLine($"Settings from secrets.json: {configuration["Password"]}");
 
 // values combined from multiple configuration sources
 Console.WriteLine($"\nMinInstances: {configuration["PaymentProcessing:MinInstances"]}");
