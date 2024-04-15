@@ -65,6 +65,19 @@ When migrating from .NET Framework to .NET Core, there are several scenarios or 
 
 8. **COM interop** - COM interop, used for communication with COM objects, is not directly supported in .NET Core. Developers may need to find alternative approaches or use .NET Framework for components that rely on COM interop.
 
+## Windows Compatibility Pack
+
+While .NET Core aims to be agnostic in its ability to be hosted on multiple platforms, packages such as the **[Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)** NuGet package exist to help ease the transition. This package offers about 20,000 additional APIs, including Windows-only functionality and support for the Windows-only APIs such as:
+
+- Registry
+- Event Log
+- Performance Counters
+- Directory Services
+- ODBC
+- CodeDom
+
+More Information: **[Use the Windows Compatibility Pack to port code to .NET](https://learn.microsoft.com/en-us/dotnet/core/porting/windows-compat-pack)**
+
 ## Support Lifecycle
 
 Different versions of .NET releases offer different support windows. Currently, even-numbered releases are offered with LTS (Long Term Support) of 3 years from the date of release, while odd-numbered releases are offered with STS (Standard Term Support) of 18 months. 
