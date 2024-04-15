@@ -2,7 +2,7 @@
 
 When migrating from .NET Framework to .NET Core, authentication and authorization mechanisms have undergone significant changes. These changes are aimed at providing a more modern and flexible approach to security while aligning with the principles of .NET Core's cross-platform and modular architecture.
 
-## Changes in Authentication and Authorization:
+## Changes in Authentication and Authorization
 
 ### Unified Identity Framework
 
@@ -17,7 +17,7 @@ When migrating from .NET Framework to .NET Core, authentication and authorizatio
 - Authentication and authorization in .NET Core are implemented using middleware components, allowing for greater control and customization in the request pipeline.
 - Middleware components like `UseAuthentication()` and `UseAuthorization()` are used to enable authentication and authorization respectively in the ASP.NET Core application pipeline.
 
-## Modes of Authentication and Authorization in .NET Core:
+## Modes of Authentication and Authorization in .NET Core
 
 ### Cookie Authentication
 - This mode relies on encrypted cookies to authenticate users. It's commonly used for web applications where users log in with a username and password.
@@ -40,7 +40,7 @@ When migrating from .NET Framework to .NET Core, authentication and authorizatio
 - .NET Core supports both role-based and claims-based authorization. Role-based authorization assigns users to predefined roles, while claims-based authorization evaluates user claims to determine access rights.
 - ASP.NET Core Identity integrates seamlessly with role-based authorization, providing a straightforward way to manage user roles and permissions.
 
-## Sample Projects
+## Examples
 
-- **[Crm](https://git.binarydad.com/ryan/Crm)** - Basic example of using cookie authentication against a static credential
-- **[GeekFit](https://git.binarydad.com/ryan/GeekFit)** - Uses Entity Framework Identity 
+- **[MVC Cookie Authentication](./Cookie/)** - Basic example of using cookie authentication against a static credential
+- **[Web API with JWT](./JWT/)** - Uses a JWT tokent to authenticate against a web API
