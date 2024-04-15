@@ -1,10 +1,6 @@
 # Default App Demos
 
-This directory contains a couple, commonly-used application templates - MVC, Web API, and Console - each created with default configuration. 
-
-## Common Changes
-
-In each (and effectively, all) .NET Core applications, there are some application-level changes that differ greatly from Framework:
+This directory contains a couple, commonly-used application templates - MVC, Web API, and Console - each created with default configuration. In each (and effectively, all) .NET Core applications, there are some application-level changes that differ greatly from Framework, such as the new SDK-style project types that greatly simplify your project files to make them more readable to changes in how NuGet packages are simplified by using transitive references instead of having to explicitly define each (nested) dependency for a particular package.
 
 ## SDK Style Project Files
 
