@@ -16,14 +16,4 @@ In .NET Core, dependencies are handled differently compared to .NET Framework. P
 
 5. **Centralized Configuration** - DI frameworks often provide centralized configuration mechanisms, simplifying the management of application-wide settings and dependencies.
 
-## Scenarios where Dependency Injection Helps
-
-1. **Service Integration** - DI is beneficial when integrating external services or libraries, as it allows for easy swapping of implementations without changing the core logic.
-
-2. **Cross-Cutting Concerns** - It helps manage cross-cutting concerns like logging, caching, and authentication by injecting these functionalities into components as needed.
-
-3. **Plugin Architecture** - DI facilitates building plugin-based architectures where components can be dynamically loaded and replaced without recompiling the main application.
-
-4. **Multi-Tenancy** - For multi-tenant applications, DI can be used to manage tenant-specific configurations and services, improving isolation and customization.
-
 Overall, adopting dependency injection in .NET Core (and also applicable to .NET Framework with some additional setup) can lead to more modular, testable, and maintainable codebases, especially in complex and evolving software systems. The inclusion of dependency injection out of the box makes it really easy to incorporate these best practices, such as decoupling and centralized management, into your application.
