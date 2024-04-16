@@ -22,16 +22,18 @@ This transition to middleware provides a more flexible and configurable request 
 
 ## Running the Example
 
+In this example, the request to the `/api/auth` endpoint will simply return the processed value of the "api-key" header value. 
+
+- The `FormatRequestKeyMiddleware` middleware class will force the API key to be all lowercase
+- The `ForbidTestApiKeysMiddleware` middleware class will deny test key values that start with the letters "abcd", unless the configuration value of "ForbidTestApiKeys" is false.
+
 ```shell
 # run the application
 dotnet run
 
+# or, optionally, run with the ForbidTestApiKeys value as "false"
+dotnet run ForbidTestApiKeys=false
+
 # use curl to get format the API key
-curl http://localhost:5282/api/auth -H "api-key: ABCDEFG123"
-```
-
-*Note: to run with ForbidTestApiKeys=true, run:*
-
-```
-dotnet run ForbidTestApiKeys=true
+curl http://localhost:5282/api/auth -v -H "api-key: ABCDEFG123"
 ```

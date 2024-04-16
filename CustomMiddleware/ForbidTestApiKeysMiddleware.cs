@@ -12,9 +12,9 @@ public class ForbidTestApiKeysMiddleware(RequestDelegate next, IConfiguration co
             {
                 context.Response.StatusCode = StatusCodes.Status403Forbidden;
                 context.Response.Headers.Append("Reason", "Test API keys are not allowed");
+            
+                return;
             }
-
-            return;
         }
 
         await next(context);
