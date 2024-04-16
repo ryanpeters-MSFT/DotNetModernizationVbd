@@ -17,3 +17,13 @@ In .NET Core, dependencies are handled differently compared to .NET Framework. P
 5. **Centralized Configuration** - DI frameworks often provide centralized configuration mechanisms, simplifying the management of application-wide settings and dependencies.
 
 Overall, adopting dependency injection in .NET Core (and also applicable to .NET Framework with some additional setup) can lead to more modular, testable, and maintainable codebases, especially in complex and evolving software systems. The inclusion of dependency injection out of the box makes it really easy to incorporate these best practices, such as decoupling and centralized management, into your application.
+
+## Dependency Injection Components in .NET
+
+In .NET, `IServiceCollection` and `IServiceProvider` are fundamental components of the dependency injection (DI) system. 
+
+`IServiceCollection` is primarily used during application startup to register services, which are typically interfaces and their corresponding implementations. These registrations define how instances of services are created and resolved throughout the application. Registrations can include scoped, transient, and singleton lifetimes, determining how instances are managed and shared.
+
+`IServiceProvider` is responsible for resolving these registered services at runtime. It's used throughout the application to request instances of services by their corresponding interfaces. When a service is requested, the DI container provides an instance based on the registered configuration.
+
+Together, these interfaces facilitate the practice of dependency injection, allowing developers to write loosely coupled, maintainable code by decoupling components and providing flexibility in managing dependencies. `IServiceCollection` is used for service registration, while `IServiceProvider` is used for service resolution during runtime.
