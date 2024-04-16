@@ -37,7 +37,8 @@ public class HomeController : Controller
         };
 
         // sets session cookie only after initial use
-        HttpContext.Session.SetString("UserAge", $"{(DateTime.Now.Date - client.BirthDate).TotalDays / 365.25}");
+        HttpContext.Session.SetString("Email", "ryanpeters@microsoft.com");
+        HttpContext.Session.SetInt32("UserAge", (int)(DateTime.Now.Date - client.BirthDate).TotalDays / 365);
 
         var currentClient = JsonSerializer.Serialize(client);
 
