@@ -4,17 +4,7 @@ In .NET Core, dependencies are handled differently compared to .NET Framework. P
 
 .NET Core makes dependency injection a first-class citizen and puts strong emphasis on its use to decouple dependencies within your code. The functionality still relies on the concept of a "container" and mapping instances for parent types and interfaces, and covers most scenarios well. As of .NET 8, the DI API now supports using a key/label for specifying a single instance if multiple implementations for a type are specified in the setup.
 
-## Dependency Handling in .NET Core vs .NET Framework:
-
-Sure, here's the information presented as a markdown table:
-
-| Aspect | .NET Framework | .NET Core |
-| --- | --- | --- |
-| **Dependency Management** | Dependencies are typically managed through `packages.config` or directly within the project files. | Dependencies are specified in a `.csproj` file (or `project.json` file in legacy versions) |
-| **Central Package Management** | This feature is not available in older versions of the tooling. | .NET Core introduced Central Package Management (CPM) starting with NuGet 6.2. This feature allows you to manage your dependencies in your projects with the addition of a `Directory.Packages.props` file and an MSBuild property. |
-| **Cross-Platform Compatibility** | .NET Framework relies on external tools for package management. | .NET Core is built with cross-platform compatibility in mind and provides built-in package management via NuGet. |
-
-## Benefits of Using Dependency Injection (DI) in .NET:
+## Benefits of Using Dependency Injection (DI) in .NET
 
 1. **Decoupling** - DI helps decouple components by allowing dependencies to be injected rather than hard-coded within classes. This promotes modularity and easier testing.
 
@@ -26,7 +16,7 @@ Sure, here's the information presented as a markdown table:
 
 5. **Centralized Configuration** - DI frameworks often provide centralized configuration mechanisms, simplifying the management of application-wide settings and dependencies.
 
-## Scenarios where Dependency Injection Helps:
+## Scenarios where Dependency Injection Helps
 
 1. **Service Integration** - DI is beneficial when integrating external services or libraries, as it allows for easy swapping of implementations without changing the core logic.
 

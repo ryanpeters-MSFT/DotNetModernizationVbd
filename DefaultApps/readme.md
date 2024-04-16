@@ -50,3 +50,9 @@ It allows for transitive package restore, meaning that if Package A depends on P
 On the other hand, .NET Framework traditionally used a `packages.config` file to manage NuGet package references. This method requires explicit listing of all packages used in the project, including transitive dependencies. However, .NET Framework projects also now support `PackageReference`, but they currently default to `packages.config` if the SDK is not defined in the project file.
 
 The shift to `PackageReference` in .NET Core represents a move towards more efficient and manageable dependency handling. It's worth noting that the `PackageReference` format can also be used in .NET Framework applications.
+
+| Aspect | .NET Framework | .NET Core |
+| --- | --- | --- |
+| **Dependency Management** | Dependencies are typically managed through `packages.config` or directly within the project files. | Dependencies are specified in a `.csproj` file (or `project.json` file in legacy versions) |
+| **Central Package Management** | This feature is not available in older versions of the tooling. | .NET Core introduced Central Package Management (CPM) starting with NuGet 6.2. This feature allows you to manage your dependencies in your projects with the addition of a `Directory.Packages.props` file and an MSBuild property. |
+| **Cross-Platform Compatibility** | .NET Framework relies on external tools for package management. | .NET Core is built with cross-platform compatibility in mind and provides built-in package management via NuGet. |
