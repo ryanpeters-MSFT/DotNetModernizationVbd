@@ -25,13 +25,6 @@ In .NET Framework and .NET Core, configuration is handled differently due to the
 - Configuration settings are typically loaded and managed through the `ConfigurationBuilder` class, which reads configuration sources and builds the configuration object.
 - .NET Core provides a hierarchy for configuration sources, allowing settings to be overridden or merged from multiple sources based on precedence rules.
 
-## Key Differences:
-
-- **Format:** .NET Framework primarily uses XML-based configuration files, while .NET Core favors JSON-based configuration files, although it supports multiple formats.
-- **APIs:** .NET Framework uses `ConfigurationManager` and related APIs for configuration access, while .NET Core uses the `IConfiguration` interface and the `ConfigurationBuilder` class.
-- **Flexibility:** .NET Core offers more flexibility in configuration sources and formats, making it easier to manage settings in different environments and scenarios.
-- **Environment-based Configuration:** .NET Core has built-in support for environment-specific configuration, allowing developers to define settings for development, staging, production, etc., and switch between them easily.
-
 Overall, .NET Core's approach to configuration is more modern, modular, and adaptable to different deployment environments, compared to the more rigid XML-based configuration system of .NET Framework.
 
 Despite the differences, there is still optional support for legacy configuration management via the **System.Configuration.ConfigurationManager** nuget package, which allows for configuration using the `web.config` or `app.config` files.
