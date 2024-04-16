@@ -20,6 +20,37 @@ However, in .NET Core, these concepts are no longer supported and have been repl
 
 This transition to middleware provides a more flexible and configurable request processing pipeline, enhancing the capabilities of .NET Core applications
 
+## Middleware Processing
+
+The ASP.NET Core request pipeline consists of a sequence of request delegates, called one after the other. The following diagram demonstrates the concept. The thread of execution follows the black arrows.
+
+![middleware](./../.images/request-delegate-pipeline.png)
+
+Each delegate can perform operations before and after the next delegate. Exception-handling delegates should be called early in the pipeline, so they can catch exceptions that occur in later stages of the pipeline.
+
+The simplest possible ASP.NET Core app sets up a single request delegate that handles all requests. This case doesn't include an actual request pipeline. Instead, a single anonymous function is called in response to every HTTP request.
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.Use(async (context, next) =>
+{
+    // Do work that can write to the Response.
+    await next.Invoke();
+    // Do logging or other work that doesn't write to the Response.
+});
+
+app.Run(async context =>
+{
+    await context.Response.WriteAsync("Hello from 2nd delegate.");
+});
+
+app.Run();
+```
+
+More Information: [Create a middleware pipeline with `WebApplication`](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0#create-a-middleware-pipeline-with-webapplication)
+
 ## Running the Example
 
 In this example, the request to the `/api/auth` endpoint will simply return the processed value of the "api-key" header value. 
