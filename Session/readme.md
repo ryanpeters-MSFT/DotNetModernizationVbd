@@ -10,10 +10,6 @@ Changes to session management in .NET Core were necessary primarily due to the e
 
 4. **Flexibility and Extensibility** - .NET Core's revamped session management system provides greater flexibility and extensibility compared to the monolithic session handling in .NET Framework. Developers can easily integrate different session stores or even create custom providers to suit their specific needs.
 
-5. **Cross-Platform Compatibility** - .NET Core's focus on cross-platform compatibility enables applications to be deployed on various cloud platforms, such as Azure, AWS, or Google Cloud. This aligns with the industry trend of adopting cloud-native architectures and services.
-
-6. **Serialization for Distributed Stores** - The emphasis on session serialization in .NET Core is crucial for supporting distributed session stores. Serialization ensures that session data can be serialized into a format that can be stored and retrieved from external stores, facilitating seamless integration with distributed environments.
-
 ## Comparison of Session between Framework and Core
 
 
