@@ -29,10 +29,10 @@ List all commands available using the `-h` flag. There are MANY commands and opt
 *Note: be sure to use the `-h` flag on all subcommands*
 
 ```powershell
-dotnet -h
+dotnet [subcommand] -h
 ```
 
-### Creating
+### [Creating](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
 
 `dotnet new [subcommand]`
 
@@ -45,32 +45,26 @@ To view a list of the installed work templates, the `dotnet new list` command ca
 dotnet new console -n MyConsoleApp -o ThisIsMyProjectFolder
 ```
 
-### Building
+### [Building](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-build)
 
 ```powershell
 # build a project within a folder
 dotnet build
 
+# build for a Release configration and target linux
+dotnet build .\project.csproj -c Release --os linux
+```
+
+### [Running](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-run)
+
+```powershell
 # run (and build) a project within a folder
 dotnet run
 
 # optionally, with command line arguments
 dotnet run "MyVariable=hello"
 ```
-
-### Running
-
-```powershell
-# build a project within a folder
-dotnet build
-
-# run (and build) a project within a folder
-dotnet run
-
-# optionally, with command line arguments
-dotnet run "MyVariable=hello"
-```
-### Publishing
+### [Publishing](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish)
 
 ```shell
 # create a web API project
@@ -78,4 +72,32 @@ dotnet new webapi -n TestApi
 
 # publish to a folder (a build also occurs)
 dotnet publish .\TestApi\TestApi.csproj -o .\output -c Release
+```
+
+### [Tool Installation](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install)
+
+You can use the `dotnet tool install` command to install various tools, either globally or locally, as nuget packages.
+
+```shell
+# install the upgrade assistant globally (use -g)
+dotnet tool install -g upgrade-assistant
+
+# list the tools installed globally
+dotnet tool list -g
+```
+
+Tools can be installed locally as well, but requires additional setup:
+
+```shell
+# list the tools currently installed locally
+dotnet tool list
+
+# install the manifest configuration file to track the installed tool(s)
+dotnet new tool-manifest
+
+# install the tool
+dotnet tool install upgrade-assistant
+
+# run the local tool (note the dotnet command prefix)
+dotnet tool run upgrade-assistant
 ```
