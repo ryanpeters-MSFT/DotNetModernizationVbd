@@ -8,8 +8,6 @@ namespace DependencyInjection.Controllers;
 [Route("v2/[controller]")]
 public class OrdersController(OrderService orderService) : ControllerBase
 {
-    private readonly OrderService orderService = orderService;
-
     [HttpGet]
     public IActionResult Get()
     {
