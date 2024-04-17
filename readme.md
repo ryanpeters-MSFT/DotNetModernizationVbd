@@ -23,6 +23,14 @@ The versioning of .NET Core started with 1.0, and major updates have incremented
 
 [![.NET versions](./.images/dotnethistory.webp)](https://world.optimizely.com/resources/net/about/)
 
+## Support Lifecycle
+
+Different versions of .NET releases offer different support windows. Currently, even-numbered releases are offered with LTS (Long Term Support) of 3 years from the date of release, while odd-numbered releases are offered with STS (Standard Term Support) of 18 months. 
+
+Currently, a new major version of .NET is released every year, typically in November. 
+
+![.NET support lifecycle](./.images/release-schedule-dark.svg)
+
 ## Limitations in .NET Framework
 
 The .NET Framework, while robust and widely used, had several limitations:
@@ -77,14 +85,6 @@ While .NET Core aims to be agnostic in its ability to be hosted on multiple plat
 - CodeDom
 
 More Information: **[Use the Windows Compatibility Pack to port code to .NET](https://learn.microsoft.com/en-us/dotnet/core/porting/windows-compat-pack)**
-
-## Support Lifecycle
-
-Different versions of .NET releases offer different support windows. Currently, even-numbered releases are offered with LTS (Long Term Support) of 3 years from the date of release, while odd-numbered releases are offered with STS (Standard Term Support) of 18 months. 
-
-Currently, a new major version of .NET is released every year, typically in November. 
-
-![.NET support lifecycle](./.images/release-schedule-dark.svg)
 
 ### Links
 
